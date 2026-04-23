@@ -1,0 +1,138 @@
+{
+    "info": {
+        "_postman_id": "85462a9d-267c-43ac-950c-cde336594e0b",
+        "name": "MFA Backend API",
+        "description": "Flat list of MFA endpoints.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Health Check",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/health",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "health"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Send OTP",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"email\": \"test@example.com\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/send-otp",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "send-otp"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Verify OTP",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"email\": \"test@example.com\",\n    \"otp\": \"123456\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/verify-otp",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "verify-otp"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Generate TOTP Secret",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/generate-totp?email=test@example.com",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "generate-totp"
+                    ],
+                    "query": [
+                        {
+                            "key": "email",
+                            "value": "test@example.com"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Verify TOTP",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"email\": \"test@example.com\",\n    \"passcode\": \"123456\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/verify-totp",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "verify-totp"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}

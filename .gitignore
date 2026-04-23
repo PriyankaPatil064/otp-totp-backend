@@ -1,0 +1,7 @@
+# Git Ignored Files
+.exe
+*.exe
+vendor/
+.idea/
+.vscode/
+*.log
