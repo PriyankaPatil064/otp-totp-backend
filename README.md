@@ -1,4 +1,4 @@
-# 🔐 MFA Backend API (Go + Gin + Redis)
+# 🔐 OTP-TOTP-Backend API (Go + Gin + Redis)
 
 [![Go Version](https://img.shields.io/badge/Go-1.18+-00ADD8?style=flat&logo=go)](https://golang.org/)
 [![Gin Gonic](https://img.shields.io/badge/Framework-Gin-0081C9?style=flat)](https://gin-gonic.com/)
