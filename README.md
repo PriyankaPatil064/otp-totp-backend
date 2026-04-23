@@ -3,7 +3,7 @@
 [![Go Version](https://img.shields.io/badge/Go-1.18+-00ADD8?style=flat&logo=go)](https://golang.org/)
 [![Gin Gonic](https://img.shields.io/badge/Framework-Gin-0081C9?style=flat)](https://gin-gonic.com/)
 [![Redis](https://img.shields.io/badge/Database-Redis-DC382D?style=flat&logo=redis)](https://redis.io/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
 
 A high-performance, secure Multi-Factor Authentication (MFA) backend implemented in Go. This project provides a robust solution for implementing 2FA (Two-Factor Authentication) using both SMS-style OTP and Google Authenticator-style TOTP.
 
@@ -123,7 +123,3 @@ curl -X POST http://localhost:8080/login/step1 \
 curl http://localhost:8080/generate-totp?email=user@example.com
 ```
 
----
-
-## 📄 License
-Distributed under the MIT License. See `LICENSE` for more information.
